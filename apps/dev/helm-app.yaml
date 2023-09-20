@@ -9,6 +9,12 @@ spec:
     server: https://kubernetes.default.svc
     namespace: default
   sources:
-    - chart: nginx
-      repoURL: https://charts.bitnami.com/bitnami
+    - repoURL: https://charts.bitnami.com/bitnami
+      chart: nginx
       targetRevision: 15.2.1
+      helm:
+        valueFiles:
+        - $values/environments/dev/dev-values.yaml
+    - repoURL: 'https://github.com/Dinidu/argocd-example-apps.git'
+      targetRevision: master
+      ref: values
