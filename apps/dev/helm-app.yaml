@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: guestbook
+  name: nginx
   namespace: argocd
 spec:
   project: default
@@ -9,6 +9,6 @@ spec:
     server: https://kubernetes.default.svc
     namespace: default
   sources:
-    - chart: guestbook
-      repoURL: https://apphub.aliyuncs.com
-      targetRevision: 0.2.0
+    - chart: nginx
+      repoURL: https://charts.bitnami.com/bitnami
+      targetRevision: 15.2.1
