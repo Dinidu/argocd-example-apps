@@ -10,5 +10,5 @@ spec:
     namespace: default
   sources:
     - chart: guestbook
-      repoURL: https://apphub.aliyuncs.com/apphub
+      repoURL: https://apphub.aliyuncs.com
       targetRevision: 0.2.0
